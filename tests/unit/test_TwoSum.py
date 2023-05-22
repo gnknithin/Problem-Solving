@@ -1,5 +1,3 @@
-from typing import List
-
 from TwoSum import Solution
 
 from tests.base_tests import BaseUnitTest
@@ -16,7 +14,6 @@ class TestTwoSumSolution(BaseUnitTest):
         )
         # Assert
         assert sut is not None
-        assert isinstance(sut,List)
         assert sut == [0,1]
 
 
@@ -29,7 +26,6 @@ class TestTwoSumSolution(BaseUnitTest):
         )
         # Assert
         assert sut is not None
-        assert isinstance(sut, List)
         assert sut == [1,2]
 
 
@@ -42,5 +38,4 @@ class TestTwoSumSolution(BaseUnitTest):
         )
         # Assert
         assert sut is not None
-        assert isinstance(sut, List)
         assert sut == [0,1]

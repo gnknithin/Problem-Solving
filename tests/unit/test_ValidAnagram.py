@@ -11,7 +11,6 @@ class TestValidAnagramSolution(BaseUnitTest):
         sut = Solution().isAnagram(s="anagram", t="nagaram")
         # Assert
         assert sut is not None
-        assert isinstance(sut,bool)
         assert sut is True
 
 
@@ -21,7 +20,6 @@ class TestValidAnagramSolution(BaseUnitTest):
         sut = Solution().isAnagram(s="rat", t="car")
         # Assert
         assert sut is not None
-        assert isinstance(sut, bool)
         assert sut is False
 
 
@@ -31,5 +29,4 @@ class TestValidAnagramSolution(BaseUnitTest):
         sut = Solution().isAnagram(s="aacc", t="ccac")
         # Assert
         assert sut is not None
-        assert isinstance(sut, bool)
         assert sut is False
