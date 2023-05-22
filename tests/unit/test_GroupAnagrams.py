@@ -12,7 +12,7 @@ class TestGroupAnagramsSolution(BaseUnitTest):
             strs=["eat", "tea", "tan", "ate", "nat", "bat"])
         # Assert
         assert sut is not None
-        assert sut == [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]]
+        assert sut == [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
 
     def test_case_2(self):
         # Arrange

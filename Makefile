@@ -8,6 +8,7 @@ ruff:
 	ruff check .
 ruff-fix:
 	ruff check --fix .
+pre-push: mypy ruff
 install-testing-req:
 	pip3 install pytest pytest-cov
 install-linting-req:
