@@ -2,6 +2,7 @@ from typing import List
 
 
 class Solution:
+    # https://www.lintcode.com/problem/659/
     def encode(self, values:List[str])->str:
         """
         @param: strs: a list of strings

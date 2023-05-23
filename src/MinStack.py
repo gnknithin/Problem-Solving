@@ -1,4 +1,5 @@
 class CustomStack:
+    # https://leetcode.com/problems/min-stack/description/
 
     def __init__(self):
         self._storage = list()

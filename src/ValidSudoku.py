@@ -3,6 +3,7 @@ from typing import Dict, List, Set, Tuple
 
 
 class Solution:
+    # https://leetcode.com/problems/valid-sudoku/description/
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         _isValid = True
         _columns: Dict[int,Set[str]] = defaultdict(set)
