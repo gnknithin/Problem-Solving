@@ -1,13 +1,13 @@
 from collections import defaultdict
-from typing import List
+from typing import Dict, List, Tuple
 
 
 class Solution:
     # https://leetcode.com/problems/group-anagrams/description/
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        _res = defaultdict(list)
+        _res : Dict[Tuple[int],List[str]] = defaultdict(list)
         for s in strs:
-            _count = [0]*26
+            _count: List[int] = [0]*26
             for c in s:
                 _count[ord(c)-ord("a")] +=1
             
