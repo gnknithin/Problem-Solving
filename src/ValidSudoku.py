@@ -6,9 +6,9 @@ class Solution:
     # https://leetcode.com/problems/valid-sudoku/description/
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         _isValid = True
-        _columns: Dict[int,Set[str]] = defaultdict(set)
+        _columns: Dict[int, Set[str]] = defaultdict(set)
         _rows: Dict[int, Set[str]] = defaultdict(set)
-        _square: Dict[Tuple[int,int], Set[str]] = defaultdict(set)
+        _square: Dict[Tuple[int, int], Set[str]] = defaultdict(set)
         for r in range(9):
             for c in range(9):
                 if board[r][c] == ".":
@@ -17,18 +17,48 @@ class Solution:
                     (
                         board[r][c] in _rows[r]
                     )
-                    or(
+                    or (
                         board[r][c] in _columns[c]
                     )
-                    or(
-                        board[r][c] in _square[(r//3,c//3)]
+                    or (
+                        board[r][c] in _square[(r//3, c//3)]
                     )
                 ):
                     _isValid = False
                     break
                 _columns[c].add(board[r][c])
                 _rows[r].add(board[r][c])
-                _square[(r//3,c//3)].add(board[r][c])
+                _square[(r//3, c//3)].add(board[r][c])
             if not _isValid:
                 break
         return _isValid
+
+
+class AnotherSolution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
+        _is_valid = True
+        _columns: Dict[int, Set[str]] = defaultdict(set)
+        _rows: Dict[int, Set[str]] = defaultdict(set)
+        _square: Dict[Tuple[int, int], Set[str]] = defaultdict(set)
+        for r in range(9):
+            for c in range(9):
+                if (board[r][c] == "."):
+                    continue
+                if (
+                    (
+                        board[r][c] in _columns[c]
+                    ) or (
+                        board[r][c] in _rows[r]
+                    ) or (
+                        board[r][c] in _square[(r//3, c//3)]
+                    )
+                ):
+                    _is_valid = False
+                    break
+                _columns[c].add(board[r][c])
+                _rows[r].add(board[r][c])
+                _square[(r//3, c//3)].add(board[r][c])
+            if not _is_valid:
+                break
+
+        return _is_valid

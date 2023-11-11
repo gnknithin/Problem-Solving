@@ -1,14 +1,14 @@
-from typing import List
+from typing import List, Set
 
 
 class Solution:
     # https://leetcode.com/problems/contains-duplicate/description
     def containsDuplicate(self, nums: List[int]) -> bool:
         _duplicate = False
-        _hashset: set[int] = set()
-        for i in nums:
-            if i in _hashset:
+        _hashset: Set[int] = set()
+        for element in nums:
+            if element in _hashset:
                 _duplicate = True
                 break
-            _hashset.add(i)
+            _hashset.add(element)
         return _duplicate

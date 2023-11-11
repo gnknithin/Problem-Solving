@@ -1,6 +1,5 @@
-from ValidParentheses import Solution
-
 from tests.base_tests import BaseUnitTest
+from ValidParentheses import Solution
 
 
 class TestValidParenthesesSolution(BaseUnitTest):
@@ -15,7 +14,6 @@ class TestValidParenthesesSolution(BaseUnitTest):
         assert sut is not None
         assert sut is True
 
-
     def test_case_2(self):
         # Arrange
         # Act
@@ -25,7 +23,6 @@ class TestValidParenthesesSolution(BaseUnitTest):
         # Assert
         assert sut is not None
         assert sut is True
-
 
     def test_case_3(self):
         # Arrange

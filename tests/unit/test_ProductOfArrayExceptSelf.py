@@ -1,4 +1,4 @@
-from ProductOfArrayExceptSelf import Solution
+from ProductOfArrayExceptSelf import AnotherSolution, Solution
 
 from tests.base_tests import BaseUnitTest
 
@@ -15,7 +15,6 @@ class TestProductOfArrayExceptSelfSolution(BaseUnitTest):
         assert sut is not None
         assert sut == [24, 12, 8, 6]
 
-
     def test_case_2(self):
         # Arrange
         # Act
@@ -24,4 +23,27 @@ class TestProductOfArrayExceptSelfSolution(BaseUnitTest):
         )
         # Assert
         assert sut is not None
-        assert sut == [0,0,9,0,0]
+        assert sut == [0, 0, 9, 0, 0]
+
+
+class TestProductOfArrayExceptSelfAnotherSolution(BaseUnitTest):
+
+    def test_case_1(self):
+        # Arrange
+        # Act
+        sut = AnotherSolution().productExceptSelf(
+            nums=[1, 2, 3, 4]
+        )
+        # Assert
+        assert sut is not None
+        assert sut == [24, 12, 8, 6]
+
+    def test_case_2(self):
+        # Arrange
+        # Act
+        sut = AnotherSolution().productExceptSelf(
+            nums=[-1, 1, 0, -3, 3],
+        )
+        # Assert
+        assert sut is not None
+        assert sut == [0, 0, 9, 0, 0]
